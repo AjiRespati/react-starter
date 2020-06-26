@@ -3,6 +3,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from '../screens/home'
 import One from '../screens/one'
+import Login from '../screens/login'
 
 const Routing = () => (
   <div>
@@ -10,6 +11,7 @@ const Routing = () => (
       <Route exact path='/' component={Home} />
       <Route path='/Home' component={Home} />
       <Route path='/One' component={One} />
+      <Route path='/Login' component={Login} />
     </Switch>
   </div>
 )

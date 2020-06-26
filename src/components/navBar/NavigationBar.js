@@ -78,7 +78,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const PersistentDrawerRight = props => {
+const NavBarRightMenu = props => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -145,16 +145,13 @@ const PersistentDrawerRight = props => {
           </IconButton>
         </div> */}
         <List>
-          {['Menu'].map((text, index) => (
-            <ListItem button onClick={handleDrawerClose} key={text}>
-              {/* <ListItemIcon><MenuIcon /></ListItemIcon> */}
-              <text style={{fontSize:"20px"}}><b>{text}</b></text>
+            <ListItem button onClick={handleDrawerClose}>
+              <text style={{fontSize:"20px"}}><b>Menu</b></text>
             </ListItem>
-          ))}
         </List>
         <Divider />
         <List>
-          {['Home', 'One', 'Send email', 'Drafts'].map((text, index) => (
+          {['Home', 'One', 'Login', 'Drafts'].map((text, index) => (
             <ListItem button onClick={() => handleDrawerClick(text)} key={text}>
               <ListItemIcon>{listIcon[index]}</ListItemIcon>
               <ListItemText primary={text} />
@@ -175,4 +172,4 @@ const PersistentDrawerRight = props => {
   );
 }
 
-export default PersistentDrawerRight
+export default NavBarRightMenu
