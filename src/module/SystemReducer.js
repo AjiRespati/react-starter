@@ -1,11 +1,11 @@
 
-const intialstate = {
+const initialstate = {
   serviceStart: false,
   snackbarMsg: null,
   snackbarStatus: null,
 }
 
-const system = (state = intialstate, action) =>{
+const system = (state = initialstate, action) =>{
   switch (action.type) {
     case 'SERVICE_START':
       return {
@@ -16,6 +16,11 @@ const system = (state = intialstate, action) =>{
       return {
         ...state,
         serviceStart: false
+      }
+    case 'SET_SNACKBAR_MESSAGE':
+      return {
+        ...state,
+        snackbarMsg: action.val
       }
     default:
       return state 

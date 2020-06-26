@@ -146,7 +146,7 @@ const NavBarRightMenu = props => {
         </div> */}
         <List>
             <ListItem button onClick={handleDrawerClose}>
-              <text style={{fontSize:"20px"}}><b>Menu</b></text>
+              <Typography style={{fontSize:"20px"}}><b>Menu</b></Typography>
             </ListItem>
         </List>
         <Divider />
